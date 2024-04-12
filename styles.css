@@ -3,20 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    line-height: 1.6;
-}
-
-.container {
-    max-width: 1200px;
-    margin: auto;
-    overflow: hidden;
-    padding: 0 20px;
-}
-
+ 
 header {
     background: #333;
     color: #fff;
@@ -44,6 +31,20 @@ header nav ul li {
 header nav ul li a {
     color: #fff;
     text-decoration: none;
+}
+ 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+.container {
+	display: inline-block; /* Ensure the container doesn't disrupt the layout */
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
 }
 
 #hero {
@@ -83,7 +84,6 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
-    position: absolute;
     bottom: 0;
-    width: 100%;
+	width: 110%;
 }
