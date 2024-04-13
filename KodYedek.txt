@@ -1,0 +1,19 @@
+	
+		 
+		<div class="col-md-3 col-sm-6" style="background-color: #333; width: 25%; height: 100px; border-radius: 10px; 
+		border: 8px solid black; padding-left: 10px; padding-right: 10px;">Car Model</div>
+		<div class="col-md-3 col-sm-6" style="background-color: #333; width: 25%; height: 100px; border-radius: 10px; 
+		border: 8px solid black; padding-left: 10px; padding-right: 10px;">Car Model</div>
+		<div class="col-md-3 col-sm-6" style="background-color: #333; width: 25%; height: 100px; border-radius: 10px; 
+		border: 8px solid black; padding-left: 10px; padding-right: 10px;">Car Model</div>
+		<div class="col-md-3 col-sm-6" style="background-color: #333; width: 25%; height: 100px; border-radius: 10px; 
+		border: 8px solid black; padding-left: 10px; padding-right: 10px;">Car Model</div>
+		<div class="col-md-3 col-sm-6" style="background-color: #333; width: 25%; height: 100px; border-radius: 10px; 
+		border: 8px solid black; padding-left: 10px; padding-right: 10px;">Car Model</div>
+		<div class="col-md-3 col-sm-6" style="background-color: #333; width: 25%; height: 100px; border-radius: 10px; 
+		border: 8px solid black; padding-left: 10px; padding-right: 10px;">Car Model</div>
+		<div class="col-md-3 col-sm-6" style="background-color: #333; width: 25%; height: 100px; border-radius: 10px; 
+		border: 8px solid black; padding-left: 10px; padding-right: 10px;">Car Model</div>
+		<div class="col-md-3 col-sm-6" style="background-color: #333; width: 25%; height: 100px; border-radius: 10px; 
+		border: 8px solid black; padding-left: 10px; padding-right: 10px;">Car Model</div>
+        </div>

@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
  
+.vertical {
+	border-left: 2px solid white;
+	height: 200px;
+}
+ 
 header {
     background: #333;
     color: #fff;
