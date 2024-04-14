@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styles.css"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Car Rental Purchase Page </title>
+</head>
+<body>
+
+<h1>Car Rental Purchase Page</h1>
+<h2 align = "center" ><a href="cars.html" class="btn">Back To Cars</a><h2>
+
+<form action="purchase_confirmation.php" method="post">
+  <label for="name">Full Name:</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="email">Email:</label>
+  <input type="text" id="email" name="email" required>
+
+  <label for="phone">Phone Number:</label>
+  <input type="text" id="phone" name="phone" required>
+
+  <label for="car">Select Car:</label>
+  <select id="car" name="car" required>
+    <option value="">Select Car</option>
+    <option value="Toyota Camry">Toyota Camry</option>   
+	<option value="Renault Clio">Renault Clio</option>
+    <option value="Honda Accord">Honda Accord</option>
+    <option value="Ford Mustang">Ford Mustang</option>
+    <option value="Chevrolet Suburban">Chevrolet Suburban</option>
+    <option value="Tesla Model S">Tesla Model S</option>
+  </select>
+
+  <label for="pickup-date">Pickup Date:</label>
+  <input type="text" id="pickup-date" name="pickup-date" placeholder="YYYY-MM-DD" required>
+
+  <label for="return-date">Return Date:</label>
+  <input type="text" id="return-date" name="return-date" placeholder="YYYY-MM-DD" required>
+
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
