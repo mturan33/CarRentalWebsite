@@ -55,20 +55,24 @@ header h1 {
 
 header nav {
     float: right;
+	text-align = center;
 }
 
 header nav ul {
     list-style: none;
+	text-align = center;
 }
 
 header nav ul li {
     float: left;
     margin-right: 20px;
+	text-align = center;
 }
 
 header nav ul li a {
     color: #fff;
     text-decoration: none;
+	text-align = center;
 }
  
 body {
@@ -115,6 +119,24 @@ body {
     background: #fff;
     padding: 50px 0;
     text-align: center;
+	
+}
+#comm {
+	padding : 60px;
+	
+}
+.centered-paragraph {
+    text-align: center; /* Paragrafı ortala */
+	padding : 50px;
+	align-items : center;
+	max-width : 1000%;
+	height : 50vh;
+}
+
+.centered-paragraph p {
+    display: inline-block; /* Paragrafları yatay olarak hizala */
+    margin: 1 auto; /* Paragrafları dikey olarak ortala */
+	align-items : center;
 }
 
 footer {
