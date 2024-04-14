@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Popup Example</title>
+<style>
+/* Style for the popup */
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 20px;
+  z-index: 9999;
+}
+
+/* Style for the overlay */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9998;
+}
+
+/* Style for the checkbox (hidden) */
+#popup-toggle {
+  display: none;
+}
+
+/* Style for the label */
+.popup-label {
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<!-- Label to open the popup -->
+<label for="popup-toggle" class="popup-label">Open Popup</label>
+
+<!-- The popup -->
+<div id="popup" class="popup">
+  <h2>This is a Popup</h2>
+  <p>This is some content inside the popup.</p>
+  <label for="popup-toggle">Close Popup</label>
+</div>
+
+<!-- The overlay -->
+<div id="overlay" class="overlay"></div>
+
+<!-- Checkbox to control the popup -->
+<input type="checkbox" id="popup-toggle">
+
+<script>
+// Function to open/close the popup
+document.getElementById("popup-toggle").addEventListener("change", function() {
+  var popup = document.getElementById("popup");
+  var overlay = document.getElementById("overlay");
+  if (this.checked) {
+    popup.style.display = "block";
+    overlay.style.display = "block";
+  } else {
+    popup.style.display = "none";
+    overlay.style.display = "none";
+  }
+});
+</script>
+
+</body>
+</html>
