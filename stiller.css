@@ -1,0 +1,51 @@
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    bottom: 0;
+	width: 110%;
+}
+
+        .foto-golge {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Gölgelendirme efekti */
+            margin-right: 20px; /* Sağ kenara biraz boşluk */
+            border-radius: 10px; /* Köşeleri yuvarlama */
+        }
+		.yansima {
+            position: relative; /* Yansımanın konumunu ayarlamak için */
+        }
+
+        .yansima::after {
+            content: attr(data-text); /* Yansımanın içeriği, orijinal metnin içeriği */
+            position: absolute; /* Mutlak pozisyonlandırma kullanılacak */
+            bottom: -10px; /* Altta biraz aşağıda olacak şekilde ayarlanabilir */
+            left: 100px; /* Sol kenara ve padding'e yapıştır */
+            font-size: 25px; /* Orijinal metnin font boyutunu kullan */
+            color: rgba(0, 0, 0, 0.5); /* Yansımanın rengi ve saydamlığı */
+            transform: scaleY(-1); /* Yansımayı dikey olarak ters çevir */
+        }
+		#hero {
+    background: url('hero.jpg') center center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+#hero h2 {
+    margin-bottom: 20px;
+}
+.btn {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #555;
+}
