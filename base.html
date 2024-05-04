@@ -17,27 +17,49 @@
   </head>
 
   <body>
+  
 
-    <header>
-        
-      <div class="navbar navbar-dark bg-dark box-shadow">
-        <div class="container d-flex justify-content-between">
-          <a href="base.html" class="navbar-brand d-flex align-items-center">
-			<img src="logocar.png" alt="Logo" width="20%" height="20%" class = "foto-golge" style= "margin-right:20px ; border-radius: 10px; padding-right="100px">
-            <strong class = "yansıma" style= " text-shadow: 10px 10px 16px rgba(0, 0, 0, 0.5); font-size: 25px;border-radius: 20px; padding-left="100px">R2 Car Rental Services</strong>
-          </a>
-		<nav>
-			<ul>
-				<li><a href="base.html">Home page</a></li>
-				<li><a href="cars3.html">Cars</a></li>
-				<li><a href="about.html">About Us</a></li>
-				<li><a href="comm.html">Communication</a></li>
-			</ul>
-		</nav>
+
+     <header>
+    <div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container">
+            <a href="base.html" class="navbar-brand">
+                <img src="logocar.png" alt="Logo" width="20%" height="20%">
+                <strong>R2 Car Rental Services</strong>
+            </a>
+            
+            <nav id="navbar">
+                <ul id="menu">
+                    <li><a href="base.html">Home page</a></li>
+                    <li><a href="cars3.html">Cars</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="comm.html">Communication</a></li>
+                    <li id="loginLink"><a href="#" onclick="openLoginPopup()">Member Login</a></li>
+                </ul>
+            </nav>
         </div>
-      </div>
-    </header>
-    
+    </div>
+</header>
+
+<div id="loginPopup" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closeLoginPopup()">&times;</span>
+        <h2>Member Login</h2>
+        <form>
+            <div class="form-group">
+                <label for="username">Userame:</label>
+                <input type="text" id="username" name="username" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" class="form-control" required>
+            </div>
+            <button type="button" onclick="login()" class="btn btn-primary">Log in</button>
+        </form>
+    </div>
+</div>
+    <script src="nasıl.js"></script>
+
     <section id="hero">
         <div class="container">
             <h2>Rent Your Dream Car</h2>
