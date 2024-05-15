@@ -7,6 +7,8 @@
 	<meta name="author" content="">
 	<link rel="stylesheet" href="stiller.css">
 	<link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+		<script src="nasıl.js" > </script>
+
 
 	<title>R2 Car Rental Services</title>
 	
@@ -33,10 +35,38 @@
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="comm.html">Communication</a></li>
                     <li><a href="#" onclick="openLoginPopup()">Member Login</a></li>
+					<li><a href="#" onclick="openSigninPopup()">Sign In</a></li>
                 </ul>
             </nav>
 
     </header>
+	<script src="nasıl.js" > </script>
+<div id="signinPopup" class="popup"> 
+<div class="popup-content">
+        <span class="close" onclick="closeSigninPopup()">&times;</span>
+        <h2>Sign In</h2>
+        <form>
+            <div class="form-group">
+                <label for="newusername">Username:</label>
+                <input type="text" id="newusername" name="newusername" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="newpassword">Password:</label>
+                <input type="password" id="newpassword" name="newpassword" class="form-control" required>
+            </div>
+			<div class="form-group">
+			    <label for="newemail">E-mail:</label>
+				<input type="email"id="newemail" name ="newemail" class="form-control" required>
+		    </div>
+			<div class="form-group">
+			     <label for="birth-date">Birth Date:</label>
+                 <input type="text" id="birth-date" name="birth-date" placeholder="YYYY-MM-DD" required>
+				 </div>
+				
+            <button type="button" onclick="signin()" class="btn btn-primary">Sign In</button>
+        </form>
+    </div>
+</div>	
 
 <div id="loginPopup" class="popup">
     <div class="popup-content">
@@ -73,7 +103,7 @@
 		  
 			<div class="col-md-4">
               <div class="card mb-4 box-shadow">
-				<img src="o-ford-focus.png" alt="Ford Focus" width="100%" height="40%" style = "border-radius: 10px;">
+				<img src="o-ford-focus.png" class="photo" id="photo1" alt="Ford Focus" width="100%" height="40%" style = "border-radius: 10px;">
 				
                 <div class="card-body">
                
@@ -111,7 +141,7 @@
 
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
-				<img src="b-renault-clio.png" alt="Renault Clio" width="100%" height="40%" style = "border-radius: 10px;">
+				<img src="b-renault-clio.png" class="photo" id="photo2" alt="Renault Clio" width="100%" height="40%" style = "border-radius: 10px;">
 				
                 <div class="card-body">
                
@@ -149,7 +179,7 @@
             		  
 			<div class="col-md-4">
               <div class="card mb-4 box-shadow">
-				<img src="d-chery-tiggo-7-pro.png" alt="Chery Tiggo 7 Pro" width="100%" height="40%" style = "border-radius: 10px;">
+				<img src="d-chery-tiggo-7-pro.png" class="photo" id="photo3" alt="Chery Tiggo 7 Pro" width="100%" height="40%" style = "border-radius: 10px;">
 				
                 <div class="card-body">
                
@@ -188,7 +218,7 @@
 		  
 			<div class="col-md-4">
               <div class="card mb-4 box-shadow">
-				<img src="d-hyundai-tucson.png" alt="Hyundai Tucson" width="100%" height="40%" style = "border-radius: 10px;">
+				<img src="d-hyundai-tucson.png" class="photo" id="photo4" alt="Hyundai Tucson" width="100%" height="40%" style = "border-radius: 10px;">
 				
                 <div class="card-body">
                
@@ -226,7 +256,7 @@
            		  
 			<div class="col-md-4">
               <div class="card mb-4 box-shadow">
-				<img src="f-hyundai-bayon.png" alt="Hyundai Bayon" width="100%" height="40%" style = "border-radius: 10px;">
+				<img src="f-hyundai-bayon.png" class="photo" id="photo5" alt="Hyundai Bayon" width="100%" height="40%" style = "border-radius: 10px;">
 				
                 <div class="card-body">
                
@@ -265,7 +295,7 @@
             		  
 			<div class="col-md-4">
               <div class="card mb-4 box-shadow">
-				<img src="f-hyundai-i20.png" alt="Hyundai i20" width="100%" height="40%" style = "border-radius: 10px;">
+				<img src="f-hyundai-i20.png" class="photo" id="photo6" alt="Hyundai i20" width="100%" height="40%" style = "border-radius: 10px;">
 				
                 <div class="card-body">
                
@@ -303,7 +333,7 @@
             		  
 			<div class="col-md-4">
               <div class="card mb-4 box-shadow">
-				<img src="f-volkswagen-polo.png" alt="Volkswagen Polo" width="100%" height="40%" style = "border-radius: 10px;">
+				<img src="f-volkswagen-polo.png" class="photo" id="photo7" alt="Volkswagen Polo" width="100%" height="40%" style = "border-radius: 10px;">
 				
                 <div class="card-body">
                
@@ -342,7 +372,7 @@
            		  
 			<div class="col-md-4">
               <div class="card mb-4 box-shadow">
-				<img src="o-hyundai-elantra.png" alt="Hyundai Elantra" width="100%" height="40%" style = "border-radius: 10px;">
+				<img src="o-hyundai-elantra.png" class="photo" id="photo8" alt="Hyundai Elantra" width="100%" height="40%" style = "border-radius: 10px;">
 				
                 <div class="card-body">
                
@@ -381,7 +411,7 @@
            		  
 			<div class="col-md-4">
               <div class="card mb-4 box-shadow">
-				<img src="o-toyota-corolla.png" alt="Toyota Corolla" width="100%" height="40%" style = "border-radius: 10px;">
+				<img src="o-toyota-corolla.png" class="photo" id="photo9" alt="Toyota Corolla" width="100%" height="40%" style = "border-radius: 10px;">
 				
                 <div class="card-body">
                
