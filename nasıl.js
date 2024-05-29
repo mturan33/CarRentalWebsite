@@ -15,11 +15,6 @@ function closeSigninPopup() {
 	document.getElementById('signinPopup').style.display = 'none';
 }
 
-function ChangeIcon($username) {
-	document.getElementById('loginUsernameDisplay').textContent = $username;
-
-}
-
 function base1() {
 	window.location.href = "baseuye.html"
 
