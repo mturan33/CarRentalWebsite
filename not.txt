@@ -1,0 +1,2 @@
+http://localhost/phpmyadmin/index.php?route=/sql&pos=0&db=car_rental&table=rentals
+http://127.0.0.1/CarRental/baseuye.html

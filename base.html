@@ -1,104 +1,88 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
 	<meta charset="utf-8">
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<link rel="stylesheet" href="stiller.css">
 	<link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
-		<script src="nasıl.js" > </script>
-
-
+	<script src="nasıl.js" > </script>
 	<title>R2 Car Rental Services</title>
-	
-
 	<link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/album/">
 	<!-- Bootstrap core CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  </head>
+</head>
 
-  <body>
+<body>
+<header>
+ <div class="navbar navbar-dark bg-dark box-shadow">
 
-    <header>
-	 <div class="navbar navbar-dark bg-dark box-shadow">
-
-        <div class="container">
-            <a href="base.html" class="navbar-brand">
-                <img src="logocar.png" alt="Logo" width="30%" height="30%">
-                <strong>R2 Car Rental Services</strong>
-            </a>
-            <nav>
-                <ul>
-                    <li><a href="base.html">Home page</a></li>
-                    <li><a href="cars3.html">Cars</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="comm.html">Communication</a></li>
-                    <li><a href="#" onclick="openLoginPopup()">Member Login</a></li>
-					<li><a href="#" onclick="openSigninPopup()">Sign In</a></li>
-                </ul>
-            </nav>
-
-    </header>
-	<script src="nasıl.js" > </script>
-<div id="signinPopup" class="popup"> 
-<div class="popup-content">
-        <span class="close" onclick="closeSigninPopup()">&times;</span>
-        <h2>Sign In</h2>
-        <form>
-            <div class="form-group">
-                <label for="newusername">Username:</label>
-                <input type="text" id="newusername" name="newusername" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="newpassword">Password:</label>
-                <input type="password" id="newpassword" name="newpassword" class="form-control" required>
-            </div>
-			<div class="form-group">
-			    <label for="newemail">E-mail:</label>
-				<input type="email"id="newemail" name ="newemail" class="form-control" required>
-		    </div>
-			<div class="form-group">
-			     <label for="birth-date">Birth Date:</label>
-                 <input type="text" id="birth-date" name="birth-date" placeholder="YYYY-MM-DD" required>
-				 </div>
-				
-            <button type="button" onclick="signin()" class="btn btn-primary">Sign In</button>
-        </form>
-    </div>
-</div>	
+	<div class="container">
+		<a href="base.html" class="navbar-brand">
+			<img src="logocar.png" alt="Logo" width="30%" height="30%">
+			<strong>R2 Car Rental Services</strong>
+		</a>
+		<nav>
+			<ul>
+				<li><a href="base.html">Home page</a></li>
+				<li><a href="cars3.html">Cars</a></li>
+				<li><a href="about.html">About Us</a></li>
+				<li><a href="comm.html">Communication</a></li>
+				<li><a href="#" onclick="openLoginPopup()">Member Login</a></li>
+				<li><a href="#" onclick="openSigninPopup()">Sign In</a></li>
+			</ul>
+		</nav>
+</header>
 
 <div id="loginPopup" class="popup">
     <div class="popup-content">
         <span class="close" onclick="closeLoginPopup()">&times;</span>
         <h2>Member Login</h2>
-        <form>
-            <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" class="form-control" required>
-            </div>
-            <button type="button" onclick="login()" class="btn btn-primary">Log in</button>
-        </form>
+		
+		<p>Welcome, <span id="loginUsernameDisplay"></span>!</p>
+		
+		<form action="login.php" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+		<input type="submit" onclick="login()" value="Login">
+		</form>
+		
+		<p>Don't have an account? <a href="">Register here</a></p>
+		
     </div>
 </div>
-    <script src="nasıl.js"></script>
 
-    <section id="hero">
-        <div class="container">
-            <h2>Rent Your Dream Car</h2>
-            <p>Wide range of vehicle options and affordable prices!</p>
-            <a href="cars3.html" class="btn">Check out the cars</a>
-        </div>
-    </section>
+<div id="signinPopup" class="popup"> 
+	<div class="popup-content">
+        <span class="close" onclick="closeSigninPopup()">&times;</span>
+        <h2>Sign In</h2>
+		
+		<form action="register.php" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <input type="submit" onclick="signin()" value="Register">
+		</form>
+		
+		<p>Already have an account? <a href="">Login here</a></p>
+       
+    </div>
+</div>	
 
-    
 
-   
+<section id="hero">
+	<div class="container">
+		<h2>Rent Your Dream Car</h2>
+		<p>Wide range of vehicle options and affordable prices!</p>
+		<a href="cars3.html" class="btn">Check out the cars</a>
+	</div>
+</section>
+
 </body>
-<footer>
+	<footer>
         <div class="container">
             <p>&copy; 2024 R2 Car Rental Services</p>
         </div>

@@ -7,67 +7,99 @@
 <title>Car Rental Purchase Page</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <script defer src="prchs.js"></script>
+
 </head>
 <body>
 
-<h1>Car Rental Purchase Page</h1>
+<h1 class="text-center">Car Rental Purchase Page</h1>
 
-<h2 align="center"><a href="cars3uye.html" class="btn">Back To Cars</a></h2>
+<h2 class="text-center"><a href="cars3uye.html" class="btn btn-primary">Back To Cars</a></h2>
 
-<form id="form" action="purchase_confirmation.php" method="post" onsubmit="return validateForm()">
-  <label for="name">Full Name:</label>
-  <input type="text" id="name" name="name" required>
-
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email" required>
-
-  <label for="country">Country:</label>
-  <select id="country" name="country" required>
-    <option value="">Select Country</option>
-    <option value="USA">USA</option>
-    <option value="Canada">Canada</option>
-    <option value="UK">UK</option>
-    <option value="Germany">Germany</option>
-    <option value="Turkey">Turkey</option>
-  </select>
-
-  <label for="city">City:</label>
-  <select id="city" name="city" required>
-    <option value="">Select City</option>
-  </select>
-
-  <label for="neighborhood">Neighborhood:</label>
-  <select id="neighborhood" name="neighborhood" required>
-    <option value="">Select Neighborhood</option>
-  </select>
-
-  <label for="phone">Phone Number:</label>
-  <input type="text" id="phone" name="phone" required>
-
-  <label for="car">Select Car:</label>
-  <select id="car" name="car" required>
-    <option value="">Select Car</option>
-    <option value="Renault Clio">Renault Clio</option>
-    <option value="Ford Focus">Ford Focus</option>
-    <option value="Chery Tiggo 7 Pro">Chery Tiggo 7 Pro</option>
-    <option value="Hyundai Bayon">Hyundai Bayon</option>
-    <option value="Hyundai i20">Hyundai i20</option>
-    <option value="Volkswagen Polo">Volkswagen Polo</option>
-    <option value="Hyundai Elantra">Hyundai Elantra</option>
-    <option value="Toyota Corolla">Toyota Corolla</option>
-    <option value="Hyundai Tucson">Hyundai Tucson</option>
-  </select>
-
-  <label for="pickup-date">Pickup Date:</label>
-  <input type="text" id="pickup-date" name="pickup-date" placeholder="YYYY-MM-DD" required>
-
-  <label for="return-date">Return Date:</label>
-  <input type="text" id="return-date" name="return-date" placeholder="YYYY-MM-DD" required>
-
-  <input type="submit" value="Submit">
-</form>
-
-
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+	  <form id="form" action="process_purchase.php" method="post" onsubmit="return validateForm()">
+        <div class="form-group">
+		  <label for="name">Full Name:</label>
+		  <input type="text" class="form-control" id="name" name="name" pattern="[A-Za-z\s]+" title="Only letters and spaces are allowed" required>
+		</div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="country">Country:</label>
+          <select class="form-control" id="country" name="country" required>
+            <option value="">Select Country</option>
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+            <option value="UK">UK</option>
+            <option value="Germany">Germany</option>
+            <option value="Turkey">Turkey</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="city">City:</label>
+          <select class="form-control" id="city" name="city" required>
+            <option value="">Select City</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="neighborhood">Neighborhood:</label>
+          <select class="form-control" id="neighborhood" name="neighborhood" required>
+            <option value="">Select Neighborhood</option>
+          </select>
+        </div>
+		
+		<label for="phone">Phone Number:</label>
+		<input type="text" id="phone" name="phone" pattern="[0-9]{11}" title="Must consist of 11 digits" required>	
+		
+        <div class="form-group">
+          <label for="car">Select Car:</label>
+          <select class="form-control" id="car" name="car" required>
+            <option value="">Select Car</option>
+            <option value="Renault Clio">Renault Clio</option>
+            <option value="Ford Focus">Ford Focus</option>
+            <option value="Chery Tiggo 7 Pro">Chery Tiggo 7 Pro</option>
+            <option value="Hyundai Bayon">Hyundai Bayon</option>
+            <option value="Hyundai i20">Hyundai i20</option>
+            <option value="Volkswagen Polo">Volkswagen Polo</option>
+            <option value="Hyundai Elantra">Hyundai Elantra</option>
+            <option value="Toyota Corolla">Toyota Corolla</option>
+            <option value="Hyundai Tucson">Hyundai Tucson</option>
+          </select>
+        </div>
+		
+		<div class="form-group">
+		  <label for="pickup-date">Pickup Date:</label>
+		  <input type="date" class="form-control" id="pickup-date" name="pickup-date" required>
+		</div>
+		<div class="form-group">
+		  <label for="return-date">Return Date:</label>
+		  <input type="date" class="form-control" id="return-date" name="return-date" required>
+		</div>
+		<div class="form-group">
+		  <label for="card-number">Credit Card Number:</label>
+		  <input type="text" class="form-control" id="card-number" name="card-number" pattern="[0-9]{16}" title="16-digit credit card number" required>
+		</div>
+		<div class="form-group">
+		  <label for="expiration-date">Expiration Date:</label>
+		  <input type="month" class="form-control" id="expiration-date" name="expiration-date" placeholder="MM/YY" required>
+		</div>
+		<div class="form-group">
+		  <label for="cvv">CVV:</label>
+		  <input type="text" class="form-control" id="cvv" name="cvv" pattern="[0-9]{3}" title="3-digit CVV" required>
+		</div>
+		<div class="form-group">
+		  <label for="name">Cardholder's Name:</label>
+		  <input type="text" class="form-control" id="cardholder-name" name="cardholder-name" pattern="[A-Za-z\s]+" title="Only letters and spaces are allowed" required>
+		</div>
+		
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>

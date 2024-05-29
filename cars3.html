@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -6,12 +5,10 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<link rel="stylesheet" href="stiller.css">
+	<script src="nasıl.js" > </script>
 	<link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
-		<script src="nasıl.js" > </script>
-
 
 	<title>R2 Car Rental Services</title>
-	
 
 	<link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/album/">
 	<!-- Bootstrap core CSS -->
@@ -38,54 +35,45 @@
 					<li><a href="#" onclick="openSigninPopup()">Sign In</a></li>
                 </ul>
             </nav>
-
     </header>
-	<script src="nasıl.js" > </script>
-<div id="signinPopup" class="popup"> 
-<div class="popup-content">
-        <span class="close" onclick="closeSigninPopup()">&times;</span>
-        <h2>Sign In</h2>
-        <form>
-            <div class="form-group">
-                <label for="newusername">Username:</label>
-                <input type="text" id="newusername" name="newusername" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="newpassword">Password:</label>
-                <input type="password" id="newpassword" name="newpassword" class="form-control" required>
-            </div>
-			<div class="form-group">
-			    <label for="newemail">E-mail:</label>
-				<input type="email"id="newemail" name ="newemail" class="form-control" required>
-		    </div>
-			<div class="form-group">
-			     <label for="birth-date">Birth Date:</label>
-                 <input type="text" id="birth-date" name="birth-date" placeholder="YYYY-MM-DD" required>
-				 </div>
-				
-            <button type="button" onclick="signin()" class="btn btn-primary">Sign In</button>
-        </form>
-    </div>
-</div>	
-
+	
 <div id="loginPopup" class="popup">
     <div class="popup-content">
         <span class="close" onclick="closeLoginPopup()">&times;</span>
         <h2>Member Login</h2>
-        <form>
-            <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" class="form-control" required>
-            </div>
-            <button type="button" onclick="login()" class="btn btn-primary">Log in</button>
-        </form>
+		
+		<p>Welcome, <span id="loginUsernameDisplay"></span>!</p>
+		
+		<form action="login.php" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+		<input type="submit" onclick="login()" value="Login">
+		</form>
+		
+		<p>Don't have an account? <a href="">Register here</a></p>
+		
     </div>
 </div>
-    <script src="nasıl.js"></script>
+
+<div id="signinPopup" class="popup"> 
+	<div class="popup-content">
+        <span class="close" onclick="closeSigninPopup()">&times;</span>
+        <h2>Sign In</h2>
+		
+		<form action="register.php" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <input type="submit" onclick="signin()" value="Register">
+		</form>
+		
+		<p>Already have an account? <a href="">Login here</a></p>
+       
+    </div>
+</div>	
 
     <main role="main">
 
@@ -101,7 +89,7 @@
 
           <div class="row">
 		  
-			<div class="col-md-4">
+			<div class="col-md-3 ml-3">
               <div class="card mb-4 box-shadow">
 				<img src="o-ford-focus.png" class="photo" id="photo1" alt="Ford Focus" width="100%" height="40%" style = "border-radius: 10px;">
 				
@@ -111,7 +99,7 @@
                     <div class="btn-group">
                       <button type="button" class="btn btn-sm btn-outline-secondary"><a href="purchase.html"><a href="purchase.html">Rent Now</a></a></button>
                     </div>
-                    <small class="text-muted"><b>Ford Focus</b></small>
+                    <small class="text-muted"><b>&nbsp Ford Focus - $30 per &nbsp&nbspday</b></small>
                   </div>
 				<hr>
 				  
@@ -139,7 +127,7 @@
             </div>
 			
 
-            <div class="col-md-4">
+            <div class="col-md-3 ml-5">
               <div class="card mb-4 box-shadow">
 				<img src="b-renault-clio.png" class="photo" id="photo2" alt="Renault Clio" width="100%" height="40%" style = "border-radius: 10px;">
 				
@@ -149,7 +137,7 @@
                     <div class="btn-group">
                       <button type="button" class="btn btn-sm btn-outline-secondary"><a href="purchase.html">Rent Now</a></button>
                     </div>
-                    <small class="text-muted"><b>Renault Clio</b></small>
+                    <small class="text-muted"><b>&nbsp Renault Clio - $25 &nbsp&nbspper day</b></small>
                   </div>
 				<hr>
 				  
@@ -177,7 +165,7 @@
             </div>
 			
             		  
-			<div class="col-md-4">
+			<div class="col-md-3 ml-5">
               <div class="card mb-4 box-shadow">
 				<img src="d-chery-tiggo-7-pro.png" class="photo" id="photo3" alt="Chery Tiggo 7 Pro" width="100%" height="40%" style = "border-radius: 10px;">
 				
@@ -187,7 +175,7 @@
                     <div class="btn-group">
                       <button type="button" class="btn btn-sm btn-outline-secondary"><a href="purchase.html">Rent Now</a></button>
                     </div>
-                    <small class="text-muted"><b>Chery Tiggo 7 Pro</b></small>
+                    <small class="text-muted"><b>&nbspChery Tiggo 7 Pro - &nbsp&nbsp$27 per day</b></small>
                   </div>
 				<hr>
 				  
@@ -216,7 +204,7 @@
 			
 
 		  
-			<div class="col-md-4">
+			<div class="col-md-3 ml-3">
               <div class="card mb-4 box-shadow">
 				<img src="d-hyundai-tucson.png" class="photo" id="photo4" alt="Hyundai Tucson" width="100%" height="40%" style = "border-radius: 10px;">
 				
@@ -226,7 +214,7 @@
                     <div class="btn-group">
                       <button type="button" class="btn btn-sm btn-outline-secondary"><a href="purchase.html">Rent Now</a></button>
                     </div>
-                    <small class="text-muted"><b>Hyundai Tucson</b></small>
+                    <small class="text-muted"><b>&nbspHyundai Tucson - $30 &nbsp&nbspper day</b></small>
                   </div>
 				<hr>
 				  
@@ -254,7 +242,7 @@
             </div>
 			
            		  
-			<div class="col-md-4">
+			<div class="col-md-3 ml-5">
               <div class="card mb-4 box-shadow">
 				<img src="f-hyundai-bayon.png" class="photo" id="photo5" alt="Hyundai Bayon" width="100%" height="40%" style = "border-radius: 10px;">
 				
@@ -264,7 +252,7 @@
                     <div class="btn-group">
                       <button type="button" class="btn btn-sm btn-outline-secondary"><a href="purchase.html">Rent Now</a></button>
                     </div>
-                    <small class="text-muted"><b>Hyundai Bayon</b></small>
+                    <small class="text-muted"><b>&nbspHyundai Bayon - $35 &nbsp&nbspper day</b></small>
                   </div>
 				<hr>
 				  
@@ -293,7 +281,7 @@
 			
 			
             		  
-			<div class="col-md-4">
+			<div class="col-md-3 ml-5">
               <div class="card mb-4 box-shadow">
 				<img src="f-hyundai-i20.png" class="photo" id="photo6" alt="Hyundai i20" width="100%" height="40%" style = "border-radius: 10px;">
 				
@@ -303,7 +291,7 @@
                     <div class="btn-group">
                       <button type="button" class="btn btn-sm btn-outline-secondary"><a href="purchase.html">Rent Now</a></button>
                     </div>
-                    <small class="text-muted"><b>Hyundai i20</b></small>
+                    <small class="text-muted"><b>&nbspHyundai i20 - $20 per &nbsp&nbspday</b></small>
                   </div>
 				<hr>
 				  
@@ -331,7 +319,7 @@
             </div>
 			
             		  
-			<div class="col-md-4">
+			<div class="col-md-3 ml-3">
               <div class="card mb-4 box-shadow">
 				<img src="f-volkswagen-polo.png" class="photo" id="photo7" alt="Volkswagen Polo" width="100%" height="40%" style = "border-radius: 10px;">
 				
@@ -341,7 +329,7 @@
                     <div class="btn-group">
                       <button type="button" class="btn btn-sm btn-outline-secondary"><a href="purchase.html">Rent Now</a></button>
                     </div>
-                    <small class="text-muted"><b>Volkswagen Polo</b></small>
+                    <small class="text-muted"><b>&nbspVolkswagen Polo - &nbsp&nbsp$22 per day</b></small>
                   </div>
 				<hr>
 				  
@@ -370,7 +358,7 @@
 			
 			
            		  
-			<div class="col-md-4">
+			<div class="col-md-3 ml-5">
               <div class="card mb-4 box-shadow">
 				<img src="o-hyundai-elantra.png" class="photo" id="photo8" alt="Hyundai Elantra" width="100%" height="40%" style = "border-radius: 10px;">
 				
@@ -380,7 +368,7 @@
                     <div class="btn-group">
                       <button type="button" class="btn btn-sm btn-outline-secondary"><a href="purchase.html">Rent Now</a></button>
                     </div>
-                    <small class="text-muted"><b>Hyundai Elantra</b></small>
+                    <small class="text-muted"><b>&nbspHyundai Elantra - $25 &nbsp&nbspper day</b></small>
                   </div>
 				<hr>
 				  
@@ -409,7 +397,7 @@
 			
 			
            		  
-			<div class="col-md-4">
+			<div class="col-md-3 ml-5">
               <div class="card mb-4 box-shadow">
 				<img src="o-toyota-corolla.png" class="photo" id="photo9" alt="Toyota Corolla" width="100%" height="40%" style = "border-radius: 10px;">
 				
@@ -419,7 +407,7 @@
                     <div class="btn-group">
                       <button type="button" class="btn btn-sm btn-outline-secondary"><a href="purchase.html">Rent Now</a></button>
                     </div>
-                    <small class="text-muted"><b>Toyota Corolla</b></small>
+                    <small class="text-muted"><b>&nbspToyota Corolla - $26 &nbsp&nbspper day</b></small>
                   </div>
 				<hr>
 				

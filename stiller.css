@@ -1,3 +1,14 @@
+.album .container .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.album .container .row .col-md-4 {
+    flex: 0 0 calc(33.33% - 1rem);
+    margin-bottom: 2rem;
+}
+
 .map{
 	display:grid;
 	grid-template-columns:repeat(auto-fit,minmax(60rem,1fr));
@@ -51,22 +62,22 @@ footer {
 }
 
         .foto-golge {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Gölgelendirme efekti */
-            margin-right: 20px; /* Sağ kenara biraz boşluk */
-            border-radius: 10px; /* Köşeleri yuvarlama */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+            margin-right: 20px; 
+            border-radius: 10px; 
         }
 		.yansima {
-            position: relative; /* Yansımanın konumunu ayarlamak için */
+            position: relative; 
         }
 
         .yansima::after {
-            content: attr(data-text); /* Yansımanın içeriği, orijinal metnin içeriği */
-            position: absolute; /* Mutlak pozisyonlandırma kullanılacak */
-            bottom: -10px; /* Altta biraz aşağıda olacak şekilde ayarlanabilir */
-            left: 100px; /* Sol kenara ve padding'e yapıştır */
-            font-size: 25px; /* Orijinal metnin font boyutunu kullan */
-            color: rgba(0, 0, 0, 0.5); /* Yansımanın rengi ve saydamlığı */
-            transform: scaleY(-1); /* Yansımayı dikey olarak ters çevir */
+            content: attr(data-text); 
+            position: absolute; 
+            bottom: -10px; 
+            left: 100px;
+            font-size: 25px; 
+            color: rgba(0, 0, 0, 0.5); 
+            transform: scaleY(-1); 
         }
 		#hero {
     background: url('hero.jpg') center center/cover no-repeat;
@@ -154,10 +165,10 @@ footer {
         
         .popup {
     display: none;
-    position: fixed; /* Ekranın dışına taşma durumlarında ekranla birlikte hareket et */
-    top: 20%; /* Dikey konumu ekranın yarısına getir */
-    left: 50%; /* Yatay konumu ekranın yarısına getir */
-    transform: translate(-50%, -50%); /* Yatay ve dikeyde ortalamak için kullan */
+    position: fixed; 
+    top: 20%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
@@ -224,6 +235,6 @@ input[type="password"] {
 	
 }
 .photo {
-    position: relative; /* veya absolute, fixed */
-    z-index: 0; /* Fotoğrafın z-index değeri */
+    position: relative;
+    z-index: 0; 
 }

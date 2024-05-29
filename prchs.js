@@ -1,3 +1,6 @@
+
+
+		
 const citiesByCountry = {
         "USA": ["New York", "California", "Texas", "Florida", "Illinois"],
         "Canada": ["Ontario", "British Columbia", "Quebec", "Alberta", "Manitoba"],
@@ -52,6 +55,8 @@ const citiesByCountry = {
             });
         }
     }
+	
+
 
     function populateNeighborhoods() {
         const citySelect = document.getElementById('city');
