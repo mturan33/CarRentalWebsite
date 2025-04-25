@@ -2,7 +2,7 @@
  Made By;
  Mehmet Turan Yardımcı
  Kenan Kaan Apucu
- İbrahim Emre Yıldız
+ Ibrahim Emre Yıldız
 
 This project is a web-based application for managing car rentals. It provides functionalities for customers to browse, reserve, and manage car rentals online. The project is designed with a user-friendly interface and includes back-end services for data management.
 
